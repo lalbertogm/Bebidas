@@ -19,10 +19,21 @@ use App\Http\Controllers\bebidasController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+//Rutas para poblar BD 
 Route::get('obtener/bebidaslimon', [bebidasController::class,'obtenerBebidasLimon'])->name("obtener.bebidaLimon");
 Route::get('obtener/bebidasSandia', [bebidasController::class,'obtenerBebidasSandia'])->name("obtener.bebidaSandia");
 Route::get('obtener/bebidasCereza', [bebidasController::class,'obtenerBebidasCereza'])->name("obtener.bebidaCereza");
 Route::get('obtener/bebidasMango', [bebidasController::class,'obtenerBebidasMango'])->name("obtener.bebidaMango");
 Route::get('obtener/bebidasNaranja', [bebidasController::class,'obtenerBebidasNaranja'])->name("obtener.bebidaNaranja");
-Route::get('/Limon', [bebidasController::class,'Limon'])->name("set.bebidaLimon");
+//Rutas para pintar los datos, formato JSON
+Route::get('/JLimon', [bebidasController::class,'JLimon'])->name("jsonBebidaLimon");
+Route::get('/JSandia', [bebidasController::class,'JSandia'])->name("jsonBebidaSandia");
+Route::get('/JCereza', [bebidasController::class,'JCereza'])->name("jsonBebidaCereza");
+Route::get('/JMango', [bebidasController::class,'JMango'])->name("jsonBebidaMango");
+Route::get('/JNaranja', [bebidasController::class,'JNaranja'])->name("jsonBebidaNaranja");
+//Rutas para pintar los datos, formato HTML
+Route::get('/HLimon', [App\Http\Controllers\bebidasController::class, 'Limon'])->name('BebidaL');
+Route::get('/HSandia', [App\Http\Controllers\bebidasController::class, 'Sandia'])->name('BebidaS');
+Route::get('/HCereza', [App\Http\Controllers\bebidasController::class, 'Cereza'])->name('BebidaC');
+Route::get('/HMango', [App\Http\Controllers\bebidasController::class, 'Mango'])->name('BebidaM');
+Route::get('/HNaranja', [App\Http\Controllers\bebidasController::class, 'Naranja'])->name('BebidaN');

@@ -251,23 +251,133 @@ class BebidasController extends Controller
        
     }
 
-    public function Limon(){
-        echo "<h3>Edadas</h3>";
+    public function Limon(){ 
+        echo "<h2>Bebidas Limon</h2>";
         $drinks=BebidasLemon::all();
         foreach($drinks as $drink)
         {
+            if(isset($drink->idDrink))
+            echo "<h3>IdDrink: $drink->idDrink</h3>"; 
+
             if(isset($drink->strDrink))
             echo "<h3>$drink->strDrink </h3>";
 
             if(isset($drink->strDrinkThumb))
-            echo "<h6>Género: $drink->strDrinkThumb<h6>";
-
-            if(isset($drink->idDrink))
-            echo "<h6>Familia: $drink->idDrink<h6>";
+            echo "<h3> Imagen </h3>";
+            echo "<img src='$drink->strDrinkThumb' alt=''>";
 
             echo "<hr>";
 
         }
 
+    }
+
+    public function Sandia(){ 
+        echo "<h2>Bebidas Sandia</h2>";
+        $drinks=BebidasWatermelon::all();
+        foreach($drinks as $drink)
+        {
+            if(isset($drink->idDrink))
+            echo "<h3>IdDrink: $drink->idDrink</h3>"; 
+
+            if(isset($drink->strDrink))
+            echo "<h3>$drink->strDrink </h3>";
+
+            if(isset($drink->strDrinkThumb))
+            echo "<h3> Imagen </h3>";
+            echo "<img src='$drink->strDrinkThumb' alt=''>";
+
+            echo "<hr>";
+
+        }
+
+    }
+
+    public function Cereza(){ 
+        echo "<h2>Bebidas Cereza</h2>";
+        $drinks=BebidasSherry::all();
+        foreach($drinks as $drink)
+        {
+            if(isset($drink->idDrink))
+            echo "<h3>IdDrink: $drink->idDrink</h3>"; 
+
+            if(isset($drink->strDrink))
+            echo "<h3>$drink->strDrink </h3>";
+
+            if(isset($drink->strDrinkThumb))
+            echo "<h3> Imagen </h3>";
+            echo "<img src='$drink->strDrinkThumb' alt=''>";
+
+            echo "<hr>";
+
+        }
+
+    }
+
+    public function Mango(){ 
+        echo "<h2>Bebidas Limon</h2>";
+        $drinks=BebidasMango::all();
+        foreach($drinks as $drink)
+        {
+            if(isset($drink->idDrink))
+            echo "<h3>IdDrink: $drink->idDrink</h3>"; 
+
+            if(isset($drink->strDrink))
+            echo "<h3>$drink->strDrink </h3>";
+
+            if(isset($drink->strDrinkThumb))
+            echo "<h3> Imagen </h3>";
+            echo "<img src='$drink->strDrinkThumb' alt=''>";
+
+            echo "<hr>";
+
+        }
+
+    }
+
+    public function Naranja(){ 
+        echo "<h2>Bebidas Naranja</h2>";
+        $drinks=BebidasOrange::all();
+        foreach($drinks as $drink)
+        {
+            if(isset($drink->idDrink))
+            echo "<h3>IdDrink: $drink->idDrink</h3>"; 
+
+            if(isset($drink->strDrink))
+            echo "<h3>$drink->strDrink </h3>";
+
+            if(isset($drink->strDrinkThumb))
+            echo "<h3> Imagen </h3>";
+            echo "<img src='$drink->strDrinkThumb' alt=''>";
+
+            echo "<hr>";
+
+        }
+
+    }
+
+    public function JLimon(){   //DevuelveJson
+        $drinks=BebidasLemon::all();
+        return $drinks;
+    }
+
+    public function JSandia(){   //DevuelveJson
+        $drinks=BebidasWatermelon::all();
+        return $drinks;
+    }
+
+    public function JCereza(){   //DevuelveJson
+        $drinks=BebidasSherry::all();
+        return $drinks;
+    }
+
+    public function JMango(){   //DevuelveJson
+        $drinks=BebidasMango::all();
+        return $drinks;
+    }
+
+    public function JNaranja(){   //DevuelveJson
+        $drinks=BebidasOrange::all();
+        return $drinks;
     }
 }
