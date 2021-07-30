@@ -21,3 +21,8 @@ Route::get('/', function () {
 });
 
 Route::get('obtener/bebidaslimon', [bebidasController::class,'obtenerBebidasLimon'])->name("obtener.bebidaLimon");
+Route::get('obtener/bebidasSandia', [bebidasController::class,'obtenerBebidasSandia'])->name("obtener.bebidaSandia");
+Route::get('obtener/bebidasCereza', [bebidasController::class,'obtenerBebidasCereza'])->name("obtener.bebidaCereza");
+Route::get('obtener/bebidasMango', [bebidasController::class,'obtenerBebidasMango'])->name("obtener.bebidaMango");
+Route::get('obtener/bebidasNaranja', [bebidasController::class,'obtenerBebidasNaranja'])->name("obtener.bebidaNaranja");
+Route::get('/Limon', [bebidasController::class,'Limon'])->name("set.bebidaLimon");
