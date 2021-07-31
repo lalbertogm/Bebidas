@@ -37,3 +37,6 @@ Route::get('/HSandia', [App\Http\Controllers\bebidasController::class, 'Sandia']
 Route::get('/HCereza', [App\Http\Controllers\bebidasController::class, 'Cereza'])->name('BebidaC');
 Route::get('/HMango', [App\Http\Controllers\bebidasController::class, 'Mango'])->name('BebidaM');
 Route::get('/HNaranja', [App\Http\Controllers\bebidasController::class, 'Naranja'])->name('BebidaN');
+//Consumir api TEAM Isai-Andrea
+Route::get('/APITeam1', [App\Http\Controllers\bebidasController::class, 'WatermelonAPI'])->name('TeamS');
+Route::get('/APITeam2', [App\Http\Controllers\bebidasController::class, 'MangoAPI'])->name('TeamS');

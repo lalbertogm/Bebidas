@@ -9,5 +9,4 @@ class BebidasLemon extends Model
 {
     use HasFactory;
     protected $table = 'drinks_lemon';
-    
 }
